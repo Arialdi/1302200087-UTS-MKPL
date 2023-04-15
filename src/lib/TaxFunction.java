@@ -40,5 +40,21 @@ public class TaxFunction {
 		}
 			 
 	}
+
+	public static int calculateNoTax(boolean isMarried, int numberOfChildren){
+		int calculateNoTax = 54000000;
+
+		if (isMarried == true){
+			calculateNoTax = calculateNoTax + 4500000;
+		}
+
+		if (numberOfChildren > 0 && numberOfChildren <= 3){
+			calculateNoTax = numberOfChildren * 4500000;
+		}else {
+			calculateNoTax = 3 * 4500000;
+		}
+		
+		return calculateNoTax;
+	} 
 	
 }
